@@ -1,17 +1,27 @@
+:root{   /**Variables de css, se usan con var()**/
+                                /**Paleta de colores**/
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+                                /**/
+}
+
 html{
     font-size: 62.5%;
 }
-body{
-    font-size: 16px;
-}   /**para normalizar los rem  rem = 10px para adaptarlos a diferentes panatllas**/
+body{ /**Lo que se haga aqui se aplica en todos los elementos**/
+    font-size: 16px; /**para normalizar los rem  rem = 10px para adaptarlos a diferentes panatllas**/
+    font-family: 'Krub', sans-serif;
+}   
 
 
-h1{
+.titulo{
     text-align: center;
-    font-size: 3.8rem;
-    
+    font-size: 3.8rem;  
 }
 
-span{
+.titulo span{
     font-size: 2rem;
 }
