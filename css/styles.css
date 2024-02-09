@@ -25,3 +25,23 @@ body{ /**Lo que se haga aqui se aplica en todos los elementos**/
 .titulo span{
     font-size: 2rem;
 }
+
+.contenedor{
+    width: 120rem;
+    margin: 0 auto ;
+}
+
+.nav-bg{
+    background-color: var(--secundario);  
+
+}
+.navegacion-principal{
+    
+}
+
+.navegacion-principal a{
+    background-color: var(--primario);
+}
+
+
+
