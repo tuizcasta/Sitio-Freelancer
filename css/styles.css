@@ -18,17 +18,20 @@ body{ /**Lo que se haga aqui se aplica en todos los elementos**/
 }   
 
 
-.titulo{
+/*TITULO INICIAL*/
+.titulo{  /*ubicacion del titulo inicial*/
     text-align: center;
     font-size: 3.8rem;  
 }
 
-.titulo span{
+.titulo span{ /*estilo del titulo inicial*/
     font-size: 2rem;
 }
 
-.contenedor{
-    width: 120rem;
+/*TITULO INICIAL*/
+
+.contenedor{  /*para cuadrar el espacio maximo que toma el contenedor*/
+    max-width: 120rem;
     margin: 0 auto ;
 }
 
@@ -40,10 +43,20 @@ body{ /**Lo que se haga aqui se aplica en todos los elementos**/
 }
 .navegacion-principal{  /*ubicacion de los elementos de la navegacion principal**/
     display: flex;
-    justify-content: space-between;  
+    flex-direction: column;
+    /* align-items: center;    Para alinear verticalmente*/
 }
 
-.navegacion-principal a{
+@media (min-width: 768px) { /*Diseño responsive de la navegacion principal*/
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;  /*Alinear orizontalmente*/
+    }   
+}
+
+.navegacion-principal a{ /*estilo a los elementos de la navegacion principal*/
+    display: block;
+    text-align: center;
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
