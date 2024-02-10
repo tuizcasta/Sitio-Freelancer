@@ -8,6 +8,7 @@
                                 /**/
 }
 
+/******************************************************************************************************************/
 html{
     font-size: 62.5%;
 }
@@ -31,17 +32,30 @@ body{ /**Lo que se haga aqui se aplica en todos los elementos**/
     margin: 0 auto ;
 }
 
+/******************************************************************************************************************/
+
+/*BARRA DE NAVEGACION PRINCIPAL*/
 .nav-bg{
     background-color: var(--secundario);  
-
 }
-.navegacion-principal{
-    
+.navegacion-principal{  /*ubicacion de los elementos de la navegacion principal**/
+    display: flex;
+    justify-content: space-between;  
 }
 
 .navegacion-principal a{
-    background-color: var(--primario);
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
 }
 
+.navegacion-principal a:hover{   /**para eventos al pasar el puntero sobre los elementos de la navegacion principal**/
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/*BARRA DE NAVEGACION PRINCIPAL*/
 
 
