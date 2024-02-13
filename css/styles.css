@@ -5,6 +5,7 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --gris_claro: #DFE9F3;
                                 /**/
 }
 
@@ -21,7 +22,9 @@ html{
 body{ /**Lo que se haga aqui se aplica en todos los elementos**/
     font-size: 16px; /**para normalizar los rem  rem = 10px para adaptarlos a diferentes panatllas**/
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--gris_claro) 0%, var(--blanco)); /*degradado de fondo*/
 }   
+
 
 /*Definimos tamaño de la tipografia para cada h*/
 h1{
@@ -74,7 +77,7 @@ h1,h2,h3{
 
 /******************************************************************************************************************/
 
-/*BARRA DE NAVEGACION PRINCIPAL*/
+/*BARRA DE NAVEGACION PRINCIPAL INICIO*/
 .nav-bg{
     background-color: var(--secundario);  
 }
@@ -105,17 +108,16 @@ h1,h2,h3{
     background-color: var(--primario);
     color: var(--oscuro);
 }
-/*BARRA DE NAVEGACION PRINCIPAL*/
+/*BARRA DE NAVEGACION PRINCIPAL FIN*/
 
-/* HEADER */
-
+/* HEADER INICIO*/
 .hero {  /*para dar fondo al header de la pagina*/
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;  /*para que la imagen no se repita*/
     background-size: cover;  /* para que la imagen tome todo el ancho de la pagina*/
     height: 45rem;
     position: relative;
-
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{  /*aca damos el fondo oscuro opaco que tiene el header*/
@@ -139,6 +141,57 @@ h1,h2,h3{
     display: flex;
     align-items: flex-end;
 }
+/* HEADER FIN*/
+
+
+/*MAIN INICIO*/
+
+.sombra{  /* darle margen y sobra a la caja que contiene el main, hecho con CSS MATIC*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) { /*Diseño reponsve para los tres servicios*/
+    .servicios{
+        display: grid; /*iniciamos grid*/
+        grid-template-columns: repeat(3, 1fr); /*numero de columnas en grid para los elementos, creamos tres columnas de una fraccion es decir 33.3% de espacio por fr*/
+       /* grid-template-rows: 200px 800px; /*numero de filas en grid para los elemetos*/
+       column-gap: 1rem; /* para separacion de las columnas*/   
+}
+}
+
+.servicio{  /* damos posicion al contenido en servicio*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{ /* dar color a los titulos de los servicios*/
+    color: var(--secundario);
+    font-weight: normal;
+      
+}
+
+.servicio p{
+    line-height: 2; /*interlineado para parrafos*/
+    text-align: center;
+}
+
+.servicio .iconos{ /*damos diseño a los iconos*/
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* MAIN FIN*/
 
 
 
